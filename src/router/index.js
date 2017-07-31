@@ -20,6 +20,7 @@ const Form = _import('page/form');
 const Table = _import('table/index');
 
 const Merchant = _import('merchant/index')
+const Order = _import('order/index')
 
 Vue.use(Router);
 
@@ -53,22 +54,22 @@ export const asyncRouterMap = [
   {
     path: '/example',
     component: Layout,
-    redirect: 'noredirect',
+    redirect: '/example/index',
     name: 'Example',
     icon: 'zujian',
     children: [
       { path: 'index', component: Form, name: 'Form', icon: 'zonghe' }
     ]
   },
-  {
-    path: '/table',
-    component: Layout,
-    redirect: '/table/index',
-    name: 'Table',
-    icon: 'tubiaoleixingzhengchang',
-    noDropdown: true,
-    children: [{ path: 'index', component: Table, name: 'Table', meta: { role: ['admin'] } }]
-  },
+  //{
+  //  path: '/table',
+  //  component: Layout,
+  //  redirect: '/table/index',
+  //  name: 'Table',
+  //  icon: 'tubiaoleixingzhengchang',
+  //  noDropdown: true,
+  //  children: [{ path: 'index', component: Table, name: 'Table', meta: { role: ['admin'] } }]
+  //},
   {
       path: '/merchant',
       component: Layout,
@@ -76,7 +77,17 @@ export const asyncRouterMap = [
       name: '商户信息',
       icon: 'tubiaoleixingzhengchang',
       noDropdown: true,
-      children: [{ path: 'index', component: Table, name: '商户列表' }]
+      children: [{ path: 'index', component: Merchant, name: '商户信息' }]
+  },
+
+  {
+      path: '/order',
+      component: Layout,
+      redirect: '/order/index',
+      name: '订单信息',
+      icon: 'tubiaoleixingzhengchang',
+      noDropdown: true,
+      children: [{ path: 'index', component: Order, name: '订单信息' }]
   },
 
   { path: '*', redirect: '/404', hidden: true }

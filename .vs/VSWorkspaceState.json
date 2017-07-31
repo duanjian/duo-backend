@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\api",
     "\\src\\router",
+    "\\src\\store",
+    "\\src\\store\\modules",
     "\\src\\utils",
     "\\src\\views",
-    "\\src\\views\\dashboard",
-    "\\src\\views\\layout",
-    "\\src\\views\\login",
-    "\\src\\views\\page",
-    "\\static"
+    "\\src\\views\\merchant",
+    "\\src\\views\\table"
   ],
-  "SelectedNode": "\\src\\router\\index.js",
+  "SelectedNode": "\\src\\views\\merchant\\index.vue",
   "PreviewInSolutionExplorer": false
 }

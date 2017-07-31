@@ -71,10 +71,14 @@
                         this.loading = true;
                         this.$store.dispatch('Login', this.loginForm).then(() => {
                           this.loading = false;
-                          //this.$router.push({ path: '/' });
+                          this.$router.push({ path: '/merchant' });
                         }).catch(() => {
                           this.loading = false;
-                        });
+                            });
+
+                        //this.$router.push({ path: '/' });
+                        //this.loading = false;
+
 
                     } else {
                         console.log('error submit!!');
